@@ -1,0 +1,76 @@
+/*-----------------------------------------------------------------------------------*/
+/*  4.0 Grid System
+/*-----------------------------------------------------------------------------------*/
+
+/*  4.1 Width */
+
+@mixin grid-setup($namespace: "") {
+ 
+
+    .#{$namespace}one-whole, %#{$namespace}one-whole, { width: 100%; }
+   
+
+    .#{$namespace}one-half , %#{$namespace}one-half { width: 50%; }
+   
+
+    .#{$namespace}one-third , %#{$namespace}one-third { width: 33.333%; }
+    .#{$namespace}two-thirds, %#{$namespace}two-thirds { width: 66.666%; }
+   
+
+    .#{$namespace}one-quarter, %#{$namespace}one-quarter { width: 25%; }
+    .#{$namespace}three-quarters, %#{$namespace}three-quarters { width: 75%; }
+    
+
+    //.#{$namespace}one-fifth, %#{$namespace}one-fifth { width: 20%; }
+    .#{$namespace}two-fifths, %#{$namespace}two-fifths           { width:40%; }
+    // .#{$namespace}three-fifths, %#{$namespace}three-fifths       { width:60%; }
+    //.#{$namespace}four-fifths, %#{$namespace}four-fifths { width: 80%; }
+    
+
+    // .#{$namespace}one-sixth, %#{$namespace}one-sixth             { width:16.666%; }
+    // .#{$namespace}five-sixths, %#{$namespace}five-sixths         { width:83.333%; }
+    
+
+    // .#{$namespace}one-eighth, %#{$namespace}one-eighth           { width:12.5%; }
+    // .#{$namespace}three-eighths, %#{$namespace}three-eighths     { width:37.5%; }
+    // .#{$namespace}five-eighths, %#{$namespace}five-eighths       { width:62.5%; }
+    // .#{$namespace}seven-eighths, %#{$namespace}seven-eighths     { width:87.5%; }
+    
+
+    // .#{$namespace}one-tenth, %#{$namespace}one-tenth             { width:10%; }
+    // .#{$namespace}three-tenths, %#{$namespace}three-tenths       { width:30%; }
+    // .#{$namespace}seven-tenths, %#{$namespace}seven-tenths       { width:70%; }
+    // .#{$namespace}nine-tenths, %#{$namespace}nine-tenths         { width:90%; }
+    
+
+    // .#{$namespace}one-twelfth, %#{$namespace}one-twelfth         { width:8.333%; }
+    //.#{$namespace}five-twelfths, %#{$namespace}five-twelfths     { width:41.666% }
+    // .#{$namespace}seven-twelfths, %#{$namespace}seven-twelfths   { width:58.333%; }
+    // .#{$namespace}eleven-twelfths, %#{$namespace}eleven-twelfths { width:91.666%; }
+}
+
+@include grid-setup;
+
+@include breakpoint($bp-xl) {
+    @include grid-setup("xl-");
+}
+
+@include breakpoint($bp-content) {
+    @include grid-setup("content-");
+}
+
+@include breakpoint($bp-lg) {
+    @include grid-setup("lg-");
+}
+
+@include breakpoint($bp-md) {
+    @include grid-setup("md-");
+}
+
+@include breakpoint($bp-sm) {
+    @include grid-setup("sm-");
+}
+
+@include breakpoint($bp-xs) {
+    @include grid-setup("xs-");
+}

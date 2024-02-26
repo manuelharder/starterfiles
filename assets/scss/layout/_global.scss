@@ -1,0 +1,37 @@
+/*-----------------------------------------------------------------------------------*/
+/*  8.0 Sections
+/*-----------------------------------------------------------------------------------*/
+
+/* 8.1 Section Spacing */
+
+
+.margin-bottom { margin-bottom:$unit; }
+.margin-top { margin-top:$unit; }
+.margin-bottom--small { margin-bottom:$unit/2; }
+.margin-bottom--big { margin-bottom:$unit*2; }
+.margin-bottom--huge { margin-bottom:$unit*3; }
+
+.spacing {
+    padding-top:$unit;
+    padding-bottom:$unit;
+}
+.spacing--big {
+    padding-top:$unit*2;
+    padding-bottom:$unit*2;
+}
+.relative { position: relative; }
+.padding { padding:$unit; }
+.padding-top { padding-top:$unit; }
+.padding-top--small { padding-top:$unit/2; }
+.padding-bottom--small { padding-bottom:$unit/2; }
+
+
+.object-fit-con {
+    position: relative;
+
+    img {
+        position: absolute;
+        @extend %full-cover;
+        object-fit:cover;
+    }
+}

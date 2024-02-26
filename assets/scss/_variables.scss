@@ -1,0 +1,95 @@
+
+// BREAKPOINTS
+
+$bp-xs              : 480px  ;
+$bp-sm              : 640px  ;
+$bp-md              : 800px  ;
+$bp-lg              : 1020px ;
+$bp-tablet          : 1024px ;
+$bp-content         : 1200px ;
+$bp-xl              : 1400px ;
+$bp-xxl             : 1600px ;
+
+$main-breakpoint    : $bp-lg;
+ 
+
+// COLORS
+
+$green        : #08BCAF; 
+$red          : #6f1723; 
+$yellow       : #FFCE00; 
+$blue:          #135E6A; 
+
+
+$lighter-grey : #F6F6F6; 
+$light-grey   : #A1A9AD; 
+$grey         : #999999; 
+$dark-grey    : #333333; 
+$darker-grey  : #222222;
+
+
+
+$color-primary        : $blue;
+$color-secondary      : $green;
+
+$color-positive       : $green;
+$color-warning        : $yellow;
+$color-negative       : $red;
+
+$body-color           : $blue;
+$brand-color          : $green;
+$headings-color       : $dark-grey; 
+
+
+
+// TYPOGRAPHY
+$font-standard      : 'source_sans_pro', 'Arial', sans-serif;
+
+$heading-font-family :  $font-standard;
+$body-font-family    :  $font-standard; 
+
+$base-font-size     : 18px;
+$base-line-height   : 30px;
+
+
+$h1-font-size        : 32px;
+$h1-line-height      : 40px;
+
+$h2-font-size        : 30px;
+$h2-line-height      : 38px;
+
+$h3-font-size        : 22px;
+$h3-line-height      : 30px;
+
+$h4-font-size        : 18px;
+$h4-line-height      : 22px;
+
+$h5-font-size        : 16px;  
+$h5-line-height      : 20px; 
+
+$h6-font-size        : 14px; 
+$h6-line-height      : 17px; 
+
+
+// SPACING
+
+$base-spacing-unit        : 40px/$base-font-size * 1rem;
+$unit                     : $base-spacing-unit;
+$base-border-radius       : 5px;
+$grid-gutter              : 40px/$base-font-size * 1rem;
+$container-pad            : $unit; 
+$container-max            : 1520px;
+$container-small-max      : 820px;
+$container-tiny-max       : 376px;
+
+
+// ANIMATION
+
+$transition-time-fast      : .25s;
+$transition-time-default   : .5s ;
+$transition-time-slow      : .75s;
+$transition-timing-default : ease-out;
+$transition-slow           : $transition-time-slow $transition-timing-default; 
+$transition-default        : $transition-time-default $transition-timing-default; 
+$transition-fast           : $transition-time-fast $transition-timing-default; 
+

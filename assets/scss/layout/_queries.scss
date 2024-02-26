@@ -1,0 +1,62 @@
+/*-----------------------------------------------------------------------------------*/
+/*  10.0 Media Queries
+/*-----------------------------------------------------------------------------------*/
+
+
+
+@include breakpoint($bp-xl) { 
+  
+
+}
+
+
+@include breakpoint($bp-content) { 
+
+
+}
+
+
+@include breakpoint($bp-tablet) {  
+    
+
+}
+
+@include breakpoint($bp-lg) {
+   
+
+}
+
+
+@include breakpoint($bp-md) {  
+   
+
+}
+
+
+@include breakpoint($bp-sm) {
+
+
+}
+
+
+@include breakpoint($bp-xs) { 
+    
+
+
+}
+
+
+
+
+@include breakpoint(360px) { 
+   
+
+}
+
+
+
+
+
+
+
+

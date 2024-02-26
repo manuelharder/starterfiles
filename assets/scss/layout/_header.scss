@@ -1,0 +1,32 @@
+/*-----------------------------------------------------------------------------------*/
+/*  7.0 Header
+/*-----------------------------------------------------------------------------------*/
+
+.site-header {
+    position:relative;
+    z-index:9999;  
+    padding-top:$unit;
+
+
+}
+
+
+
+.site-branding {
+    float:left;
+    position:relative;
+    width:320px;
+    z-index:9;
+}
+
+
+// Mobile Toggle
+
+.site-header__toggle { 
+    display: none; 
+    
+    @include breakpoint($main-breakpoint) {
+        display: inline-block;
+    } 
+}
+

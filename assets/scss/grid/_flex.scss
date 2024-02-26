@@ -1,0 +1,65 @@
+/*  4.4 Flexgrid */
+
+
+
+
+.flexgrid, .flex {
+    display:flex;
+}
+
+.flexgrid--gutter {
+    margin-left:-$grid-gutter;
+
+    .flex__item {
+        padding-left:$grid-gutter;
+    }
+}
+
+.flexgrid--narrow {
+    margin-left:-$grid-gutter*0.5;
+
+    .flex__item {
+        padding-left:$grid-gutter*0.5;
+    }
+}
+
+.flexgrid--wide {
+    margin-left:-$grid-gutter*2;
+
+    .flex__item {
+        padding-left:$grid-gutter*2;
+    }
+}
+
+.flex--end {
+    justify-content:flex-end;
+}
+
+
+.flex--middle {
+    align-items: center;
+
+    p:last-child {
+        margin-bottom:0;
+    }
+}
+
+.flex--column { 
+    flex-direction: column; 
+}
+
+.flex--center {
+    justify-content: center;
+}
+
+.flex--bottom {
+    align-items: flex-end;
+}
+
+.flex1 {
+    flex:1 0 auto;
+}
+
+.flex--wrap {
+    flex-wrap:wrap;
+}

@@ -1,0 +1,23 @@
+/*  4.2 Container */
+
+.container, %container {
+    @extend %cf;
+    max-width: $container-max;
+    box-sizing: content-box;
+    margin: 0 auto;
+    padding-left: $container-pad;
+    padding-right: $container-pad;
+}
+
+
+.container--full {
+    max-width: 100%;
+}
+.container--small {
+    max-width: $container-small-max !important;
+}
+.container--tiny {
+    max-width: $container-tiny-max !important;
+}
+
+

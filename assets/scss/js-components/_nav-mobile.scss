@@ -1,0 +1,74 @@
+/*  6.4 Mobile Nav */
+
+
+
+.nav-mobile {
+    position:fixed;
+    z-index:4000;
+    left: 0;
+    top:0;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity $transition-fast, transform $transition-fast; 
+}
+
+.nav-mobile__inner { 
+    background: #FFF;
+    min-height:100%; 
+    display:inline-block; 
+    width:100%;   
+    padding-top: $base-spacing-unit*3;        
+
+    .nav-mobile-active--fixed & {
+        min-height: 120%;
+    }
+}
+
+
+.nav-mobile-active,
+.nav-mobile-active body {
+    overflow:hidden;
+}
+
+.nav-mobile-active--relative body {
+
+    height:100%;
+}
+ 
+.nav-mobile {
+    
+    .nav-mobile-transiting & ,
+    .nav-mobile-active & {
+        height: 100%;
+        -webkit-backface-visibility:hidden;
+        overflow:auto;
+        -webkit-overflow-scrolling:touch;
+       
+    } 
+}
+
+.nav-mobile-active .nav-mobile {
+    opacity: 1; 
+}
+
+
+
+.nav-mobile__inner ul {
+    list-style:none;
+    padding:0;
+    margin:0;
+
+    li {
+        display:block;
+    }
+
+    a {
+        display:block;
+        padding:1rem 1rem;
+    }
+}
+
+
+

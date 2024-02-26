@@ -1,0 +1,42 @@
+
+@mixin font-size($font-size, $line-height: false) {
+    font-size: $font-size / $base-font-size * 1rem;
+    @if $line-height {
+        line-height: $line-height / $font-size;
+    }
+}
+
+
+@mixin breakpoint($media-query) {
+    @media only screen and (max-width: $media-query) {
+        @content;
+    }
+}
+
+@mixin breakpoint-height($media-query) {
+    @media only screen and (max-height: $media-query) {
+        @content;
+    }
+}
+
+@mixin breakpoint-min($media-query) {
+    @media only screen and (min-width: $media-query + 1px) {
+        @content;
+    }
+}
+
+@mixin breakpoint-between($min, $max) {
+    @media only screen and (min-width: $min + 1px) and (max-width: $max) {
+        @content;
+    }
+}
+
+
+
+@mixin shorten-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display:block;
+}
+

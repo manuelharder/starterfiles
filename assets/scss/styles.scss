@@ -1,0 +1,39 @@
+// Variables
+@import "_variables";
+
+@import "base/_normalize";
+
+@import "../icomoon/style"; 
+
+@import "base/__mixins";
+@import "base/__helpers";
+@import "base/_media";
+
+
+//Grid
+@import "grid/_widths"; 
+@import "grid/_container";
+@import "grid/_flex";
+
+
+@import "base/_typography";
+
+// Components
+@import "components/_buttons";
+@import "components/_forms";
+@import "components/_nav";
+@import "js-components/_nav-mobile";
+@import "js-components/_transitions";
+//@import "js-components/_slider";
+
+
+// Layout
+@import "layout/_header";
+@import "layout/_global";
+@import "layout/_footer";
+
+@import "layout/_queries";
+
+
+ 
+

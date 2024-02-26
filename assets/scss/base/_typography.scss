@@ -1,0 +1,174 @@
+/*-----------------------------------------------------------------------------------*/
+/*  5.0 Typography
+/*-----------------------------------------------------------------------------------*/
+
+
+html {
+    font-family: $body-font-family;
+    font-size: $base-font-size;
+    line-height: $base-line-height / $base-font-size;
+    color: $body-color;
+    font-weight: normal;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+}
+
+*::selection {
+    background: $color-primary;
+    color: white;
+}
+
+
+.icon {
+    @extend [class*=" icon-"];
+}
+
+[data-target] {
+    cursor: pointer;
+}
+
+
+/*  5.1 Links */
+a {
+    text-decoration: none;
+    color:$color-primary; 
+    &:hover {
+        color: darken($color-primary, 10%)
+    }
+
+    //remove the dotted outline on firefox
+    &:focus, &:active {
+        outline: none;
+    }
+}
+
+a, i {
+    -webkit-tap-highlight-color: transparent;
+}
+
+%heading-style {
+    font-family: $heading-font-family;
+    font-weight:bold;
+    margin-top: 0;
+    margin-bottom:$base-spacing-unit/2;
+    color:$headings-color;
+}
+
+
+
+/*  5.2 Headlines */
+
+h1, .alpha,
+h2, .beta,
+h3, .gamma,
+h4, .delta,
+h5, .epsilon,
+h6, .zeta {
+    @extend %heading-style; 
+    a, a:visited {
+        text-decoration: none;
+    } 
+}
+
+
+
+// Using a Major Third Scale
+// Change the multipliers to create your own scale that suits the project
+h1, .alpha {
+    @include font-size($h1-font-size, $h1-line-height);
+
+    margin-bottom:$base-spacing-unit;
+
+}
+
+h2, .beta {
+    @include font-size($h2-font-size, $h2-line-height);
+}
+
+h3, .gamma {
+    @include font-size($h3-font-size, $h3-line-height);
+}
+
+h4, .delta {
+    @include font-size($h4-font-size, $h4-line-height); 
+}
+
+h5, .epsilon {
+    @include font-size($h5-font-size, $h5-line-height);
+}
+
+h6, .zeta {
+    @include font-size($h6-font-size, $h6-line-height);
+}
+
+p, blockquote,
+pre, dl {
+    margin:0 0 $base-spacing-unit/2;
+}
+
+
+
+
+/*  5.3 Alignment */
+.text--center,
+.has-text-align-center {
+    text-align: center;
+}
+.text--right,
+.has-text-align-right {
+    text-align: right;
+}
+.uppercase {
+    text-transform: uppercase;
+}
+
+.alignleft img {
+    margin-left:0;
+}
+.alignright img {
+    margin-right:0;
+}
+
+
+/*  5.4 Quotes */
+
+blockquote {
+    @include font-size($base-font-size, $base-line-height);
+    padding: 0 1.5em;
+    font-style: italic;
+    cite {
+        margin: 0;
+        font-style: italic;
+    }
+}
+
+hr {
+    border:none;
+    border-top:1px solid $light-grey;
+    margin: $base-spacing-unit*2 0;
+}
+
+q {
+    font-style: italic;
+} 
+
+pre {
+    padding: $base-spacing-unit;
+    border-radius: $base-border-radius;
+    border: 1px solid $grey;
+}
+
+ul {
+    padding-left:1rem;
+}
+
+
+@font-face {
+    font-family: 'source_sans_pro';
+    src: url('../fonts/source-sans-pro-v9-latin-600.woff2') format('woff2'),
+         url('../fonts/source-sans-pro-v9-latin-600.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+

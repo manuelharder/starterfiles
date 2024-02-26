@@ -1,0 +1,91 @@
+
+
+/*-----------------------------------------------------------------------------------*/
+/*      2.0 Helper
+/*-----------------------------------------------------------------------------------*/
+
+/* 2.1 FLOATS */
+.float--right {
+    float: right !important;
+}
+
+.float--left {
+    float: left !important;
+}
+
+
+/* 2.2 CONTENT/BG COVER */
+%bg--image, .bg--image {
+    background-position:center center;
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+
+%full-cover {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+/* 2.3 VISIBILITY */
+
+
+.hidden {
+    display:none;
+}
+
+.hidden--mobile {
+    @include breakpoint($main-breakpoint) {
+        display: none;
+    }
+}
+
+
+.hidden--desktop {
+    @include breakpoint-min($main-breakpoint) {
+        display: none;
+    }
+}
+
+@mixin element-invisible {
+    position: absolute !important;
+    clip: rect(1px, 1px, 1px, 1px);
+    overflow: hidden;
+    height: 1px;
+    width: 1px;
+}
+
+%element-invisible {
+    @include element-invisible;
+}
+
+.sr-only,
+.screen-reader-text {
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    overflow: hidden;
+    position: absolute !important;
+    width: 1px;
+}
+
+
+
+/* 2.4 CLEARFIX */
+%clearfix, %cf, .clearfix, .cf {
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+@mixin clearfix {
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
